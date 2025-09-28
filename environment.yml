@@ -1,0 +1,14 @@
+name: tabpfn_mimic3
+channels: [conda-forge, pytorch]
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - pytorch>=2.2
+  - matplotlib
+  - pip:
+      - tabpfn>=0.1.9
+      - torchmetrics
+      - rich
