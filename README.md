@@ -1,5 +1,10 @@
 # FoundationModel_on_Mimic3_ClinRisk
-This project in on Clinical risk prediction on MIMIC-III using **TabPFN** (Prior-Fitted Networks).
+This project in on Clinical risk prediction on MIMIC-III using **TabPFN** (Prior-Fitted Networks). Predicting in‑hospital mortality from features available within first 24h (toy example for demo). You can switch label to 30‑day mortality or prolonged LOS by editing scripts/prepare_mimic_demo.py.
+
+## File-wise methods
+- src/preprocessing.py – imputation (median/mode), scaling, one‑hot for categorical, simple time‑window aggregations.
+- src/train_tabpfn.py – loads the pretrained TabPFN model and runs context‑based prediction.
+- src/metrics.py – wrappers around scikit‑learn for AUROC/AUPRC/F1/Calibration.
 
 ## ✨ Highlights
 - Uses **MIMIC‑III Demo** from PhysioNet (https://physionet.org/content/mimiciii-demo/1.4/)
